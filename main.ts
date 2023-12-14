@@ -1,6 +1,6 @@
 import { PeerServer } from "npm:peer";
 
-const ENVIRONMENT = Deno.env.get("ENVIRONMENT");
+const ENVIRONMENT = Deno.env.get("ENVIRONMENT") as 'DEV' | 'PROD';
 
 const ssl = {
   PROD: undefined,
